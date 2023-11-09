@@ -14,7 +14,7 @@ function App() {
   const calculate = () => {
     try {
       // Use JavaScript's eval function to evaluate the user input as an expression
-      const calculatedResult = eval(input);
+      const calculatedResult = math.evaluate(input);
       setResult(calculatedResult);
     } catch (error) {
       setResult('Error'); // Handle any errors in the calculation
@@ -22,10 +22,10 @@ function App() {
   };
 
   // Function to clear the input and result
-const clear = () => {
-  setInput('');
-  setResult('');
-};
+  const clear = () => {
+    setInput('');
+    setResult('');
+  };
 
 
   return (
@@ -46,30 +46,30 @@ const clear = () => {
             <button onClick={clear} className="clear-button">C</button>
           </div>
           <div className="button-row">
-              <button onClick={() => setInput(input + '4')}>4</button>
-              <button onClick={() => setInput(input + '5')}>5</button>
-              <button onClick={() => setInput(input + '6')}>6</button>
-              <button onClick={() => setInput(input + ' * ')}>*</button>
-            </div>
-            <div className="button-row">
-              <button onClick={() => setInput(input + '1')}>1</button>
-              <button onClick={() => setInput(input + '2')}>2</button>
-              <button onClick={() => setInput(input + '3')}>3</button>
-              <button onClick={() => setInput(input + ' + ')}>+</button>
-            </div>
-            <div className="button-row">
-              <button onClick={() => setInput(input + '0')}>0</button>
-              <button onClick={() => setInput(input + '.')}>.</button>
-              <button onClick={calculate}>=</button>
-              <button onClick={() => setInput(input + ' - ')}>-</button>
-            </div>
+            <button onClick={() => setInput(input + '4')}>4</button>
+            <button onClick={() => setInput(input + '5')}>5</button>
+            <button onClick={() => setInput(input + '6')}>6</button>
+            <button onClick={() => setInput(input + ' * ')}>*</button>
+          </div>
+          <div className="button-row">
+            <button onClick={() => setInput(input + '1')}>1</button>
+            <button onClick={() => setInput(input + '2')}>2</button>
+            <button onClick={() => setInput(input + '3')}>3</button>
+            <button onClick={() => setInput(input + ' + ')}>+</button>
+          </div>
+          <div className="button-row">
+            <button onClick={() => setInput(input + '0')}>0</button>
+            <button onClick={() => setInput(input + '.')}>.</button>
+            <button onClick={calculate}>=</button>
+            <button onClick={() => setInput(input + ' - ')}>-</button>
+          </div>
         </div>
         <div className="input-container">
- 
-  <div className="result">
-    <p>{result}</p>
-  </div>
-</div>
+
+          <div className="result">
+            <p>{result}</p>
+          </div>
+        </div>
 
 
 
