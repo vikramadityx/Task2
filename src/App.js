@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
+const math = require('mathjs');
 
 function App() {
   const [input, setInput] = useState(''); // State to store user input
